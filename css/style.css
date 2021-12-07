@@ -1,0 +1,89 @@
+@import url('https://rsms.me/inter/inter.css');
+:root {
+    --accent: #fab423;
+    --white: #fafafa;
+    --black: #212121;
+    --gray: #666666;
+    --light-gray: #aaaaaa;
+    --gradient-top: #fbe2c7;
+    --gradient-bottom: #fad7af;
+    --dark-gradient-top: #1e1e1e;
+    --dark-gradient-bottom: #323232;
+}
+
+html {
+    font-family: 'Inter', Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+    
+}
+
+::selection {
+    color: var(--white);
+    background: var(--accent);
+}
+
+body {
+    line-height: 1.6;
+    margin: 5em 1em 2em 1.8em;
+}
+
+h1 {
+    font-size: 175%;
+    font-weight: 500;
+    margin: 0 0 0 0;
+}
+
+h2,
+h3 {
+    color: var(--gray);
+    font-weight: normal;
+    font-size: 14pt;
+    margin: 0 0 0 0;
+}
+
+.memoji {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--gradient-top), var(--gradient-bottom));
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: linear-gradient(var(--dark-gradient-top), var(--dark-gradient-bottom));
+        color: var(--white);
+    }
+    a {
+        color: var(--white);
+    }
+    h2,
+    h3 {
+        color: var(--light-gray);
+    }
+    .footer {
+        color: var(--light-gray);
+    }
+    .label {
+        color: var(--gray);
+    }
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
